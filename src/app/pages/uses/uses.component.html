@@ -1,1 +1,63 @@
-<p>uses works!</p>
+<!-- <div class="h-40 w-full bg-gray-300"></div> -->
+<div>
+  <div class="text-4xl font-bold text-t_highlight">Use</div>
+  <div>
+    I currently use this tech equipment for my day-to-day work as a software
+    engineer. I upgraded a lot of my equipment since the beginning of the
+    pandemic, when we all started working remotely full-time.
+  </div>
+  <div class="h-40 w-full bg-gray-300"></div>
+  <!-- Computer n hardware -->
+  <div>
+    <div class="text-2xl font-semibold text-t_primary">Computer & Hardware</div>
+    <ul class="ml-6 list-disc text-lg">
+      @for (gear of hardwares; track $index) {
+        <li>
+          <a href="{{ gear.href }}">
+            <span class="font-semibold">{{ gear.model }}</span>
+          </a>
+          {{ gear.extra }}
+        </li>
+      }
+    </ul>
+  </div>
+
+  <!-- Phần mềm-->
+  <div>
+    <div class="text-2xl font-semibold text-t_primary">Software</div>
+    <ul class="ml-6 list-disc text-lg">
+      @for (soft of softWare; track softWare) {
+        <li>
+          <a href="{{ soft.href }}">
+            <span class="font-semibold">{{ soft.name }}</span>
+          </a>
+          {{ soft.extra }}
+        </li>
+      }
+    </ul>
+  </div>
+
+  <!--Công cụ thiết kế -->
+  <div>
+    <div class="text-2xl font-semibold text-t_primary">Design Tools</div>
+    <ul class="ml-6 list-disc text-lg">
+      @for (tool of designTools; track designTools) {
+        <li>
+          <a href="{{ tool.href }}">
+            <span class="font-semibold">{{ tool.name }}</span>
+          </a>
+          {{ tool.extra }}
+        </li>
+      }
+    </ul>
+  </div>
+  <!--Công cụ khác -->
+  <div>
+    <div class="text-2xl font-semibold text-t_primary">
+      Various other software
+    </div>
+    <ul class="ml-6 list-disc text-lg">
+      <li>Mac</li>
+    </ul>
+  </div>
+</div>
